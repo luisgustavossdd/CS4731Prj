@@ -1,3 +1,5 @@
 StartTime = -17
-LittleState: StTime = -17 EdTime = 2982
-Totaltime = 2999
+StompKill:  EnemyType = BulletBill time = -1
+LittleState: StTime = -17 EdTime = 12
+Totaltime = 29
+Die:  EnemyType = BulletBill 

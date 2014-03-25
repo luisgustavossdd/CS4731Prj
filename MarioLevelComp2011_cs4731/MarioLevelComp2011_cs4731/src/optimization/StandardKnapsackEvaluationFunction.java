@@ -1,11 +1,11 @@
 package optimization;
 
 
-public class KnapsackEvaluationFunction<T> implements EvaluationFunction<T> {
+public class StandardKnapsackEvaluationFunction<T> implements EvaluationFunction<T> {
 
-	private int maxWeight;
+	private double maxWeight;
 
-	public KnapsackEvaluationFunction(int maxWeight) {
+	public StandardKnapsackEvaluationFunction(double maxWeight) {
 		this.maxWeight = maxWeight;
 	}
 
@@ -14,8 +14,8 @@ public class KnapsackEvaluationFunction<T> implements EvaluationFunction<T> {
 		double value = 0.0;
 		double weight = 0.0;
 		double[] variables	= individual.getVariables();
-		double[] weights	= individual.getWeights();
-		double[] profits	= individual.getProfits();
+		double[] weights	= individual.getWeight();
+		double[] profits	= individual.getProfit();
 		
 		for(int i =0; i < variables.length; i++)	{
 			weight	+= weights[i] * variables[i];
